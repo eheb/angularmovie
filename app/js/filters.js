@@ -2,16 +2,14 @@
 
 angularMovieApp.filter('stars', function () {
 
-    var STARS = {
-        1: '\u2605',
-        2: '\u2605\u2605',
-        3: '\u2605\u2605\u2605',
-        4: '\u2605\u2605\u2605\u2605',
-        5: '\u2605\u2605\u2605\u2605\u2605'
-    };
+    
+     return function(startCount) {
+    	var ret='';
+		for(var i=0; i <startCount;i++){
+			ret += "\u2605";
+		}
+        return  ret;
 
-    return function(startCount) {
-        return STARS[startCount];
     };
 });
 
